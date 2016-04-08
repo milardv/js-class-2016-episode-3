@@ -1,6 +1,11 @@
 <div id="content">
-  <div class="container">
-    <h1 id="header">Exercise 2</h1>
-    <p>Show me Chuck Norris facts :</p>
-  </div>
+    <div class="container">
+        <h1 id="header">Exercise 2</h1>
+        <p>Show me Chuck Norris facts : {{ facts }}</p>
+        <ul>
+            <li ng-repeat="fact in $ctrl.facts">
+            <fact fact="fact.joke"></fact>
+            </li>
+        </ul>
+    </div>
 </div>

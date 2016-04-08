@@ -17,7 +17,6 @@ window._app.global_ng_module
 .controller('AppController', [function () {
   this.title = 'Exercise 02';
 }]);
-
 // use more convenient AMD syntax
 require([
   'client/exercise-02/ng/components/layout',
