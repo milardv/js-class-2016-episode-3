@@ -12,12 +12,13 @@ appModule.controller('AppController', ['$scope', function ($scope) {
 }]);
 
 
+
 appModule.component('layout', {
   templateUrl: 'client/exercise-01/layout.html'
 });
 
 appModule.controller('HelloController',
-  [function () {
+  ['$timeout',    function ($timeout) {
     this.names = [];
 
     this.addName = function () {
@@ -30,8 +31,9 @@ appModule.controller('HelloController',
       // XXXX BAAAD NOT ANGULAR !!!!
       // DON'T WORK !
       // FIX ME !
-      setTimeout(() => this.names.shift(), 1000);
-      ////////////////////////////////////////
+//      setTimeout(() => this.names.shift(), 1000);
+      $timeout(() => this.names.shift(), 1000);
+      ///////////////////////////////////////
     };
   }]
 );
